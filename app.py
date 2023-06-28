@@ -16,8 +16,8 @@ def static_file(path):
     return app.send_static_file(path)
 
 # ACS Integration Settings
-AZURE_SEARCH_SERVICE = os.environ.get("AZURE_SEARCH_SERVICE")
-AZURE_SEARCH_INDEX = os.environ.get("AZURE_SEARCH_INDEX")
+AZURE_SEARCH_SERVICE = os.environ.get("AZURE_SEARCH_SERVICE","oaicogsearchsrvc")
+AZURE_SEARCH_INDEX = os.environ.get("AZURE_SEARCH_INDEX","cmshraiindex")
 AZURE_SEARCH_KEY = os.environ.get("AZURE_SEARCH_KEY")
 AZURE_SEARCH_USE_SEMANTIC_SEARCH = os.environ.get("AZURE_SEARCH_USE_SEMANTIC_SEARCH", "false")
 AZURE_SEARCH_SEMANTIC_SEARCH_CONFIG = os.environ.get("AZURE_SEARCH_SEMANTIC_SEARCH_CONFIG", "default")
